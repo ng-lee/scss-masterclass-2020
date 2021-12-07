@@ -1,23 +1,27 @@
 @import "_variables";
 
-body {
-  display: flex;
-  width: 100%;
+.split {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow: auto;
+  line-height: 1.5em;
 }
 
-header {
+.header {
+  left: 0;
   width: 40%;
   height: 100%;
   display: flex;
   flex-direction: column;
   background-color: #f0f0f0;
   .introduction {
-    margin-left: 70px;
-    margin-right: 180px;
-    margin-top: 80px;
+    margin: 80px 180px 90px 70px;
     color: $custom_red;
     h1 {
       font-size: 80px;
+      line-height: 1em;
     }
     h4 {
       margin-top: 90px;
@@ -30,13 +34,15 @@ header {
   }
 }
 
-main {
+.main {
+  right: 0;
+  width: 60%;
   display: flex;
   flex-direction: column;
   background-color: $custom_red;
   color: white;
   .nav {
-    position: sticky;
+    position: fixed;
     width: inherit;
     height: 140px;
     background-color: $custom_red;
@@ -44,13 +50,15 @@ main {
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid black;
+    font-size: 20px;
   }
   .content {
+    margin-top: 135px;
     ul {
       li {
         .movie {
           padding: 80px 70px 60px 74px;
-          box-shadow: inset 0px -20px 30px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0px -20px 30px 1px rgba(0, 0, 0, 0.3);
           .movie__info {
             display: flex;
             justify-content: space-between;
@@ -68,15 +76,20 @@ main {
             width: inherit;
             height: 440px;
             background-color: white;
+            box-shadow: 0 20px 30px 2px rgba(0, 0, 0, 0.2);
           }
           .movie__comment {
             margin-top: 40px;
             display: flex;
             justify-content: flex-end;
+            font-size: 18px;
+            p {
+              font-weight: 600;
+              text-indent: 2em;
+            }
             .comment {
+              font-weight: 600;
               width: 50%;
-              font-weight: 500;
-              font-size: 18px;
               div {
                 margin-top: 27px;
                 display: flex;
@@ -92,6 +105,14 @@ main {
             display: flex;
             justify-content: space-between;
             color: $custom_purple;
+            font-weight: bold;
+            font-size: 18px;
+            a {
+              text-decoration: none;
+              color: inherit;
+              padding-bottom: 15px;
+              border-bottom: 3px solid $custom_purple;
+            }
           }
         }
       }
