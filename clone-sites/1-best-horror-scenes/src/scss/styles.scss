@@ -1,0 +1,123 @@
+@import "_variables";
+
+// * {
+//   box-sizing: border-box;
+// }
+
+.split {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  overflow: auto;
+  line-height: 1.5em;
+}
+
+.header {
+  left: 0;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f0f0;
+  .introduction {
+    margin: 80px 180px 90px 70px;
+    color: $custom_red;
+    h1 {
+      font-size: 80px;
+      line-height: 1em;
+      letter-spacing: 0.1em;
+    }
+    h4 {
+      margin-top: 90px;
+      font-size: 25px;
+      line-height: 1.2em;
+      font-weight: 500;
+    }
+    p {
+      margin-top: 30px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+}
+
+.main {
+  right: 0;
+  margin-left: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $custom_red;
+  color: white;
+  .content {
+    ul {
+      li {
+        .movie {
+          padding: 72px;
+          box-shadow: inset 0px -20px 30px 1px rgba(0, 0, 0, 0.3);
+          .movie__info {
+            display: flex;
+            height: max-content;
+            justify-content: space-between;
+            align-items: flex-end;
+            font-weight: 600;
+            vertical-align: text-bottom;
+            height: auto;
+
+            .movie-title {
+              font-size: 50px;
+
+              vertical-align: text-bottom;
+            }
+            // .movie-director {
+            //   vertical-align: text-bottom;
+            // }
+          }
+          .movie__video {
+            margin-top: 40px;
+            width: inherit;
+            height: 440px;
+            background-color: white;
+            box-shadow: 0 20px 30px 2px rgba(0, 0, 0, 0.2);
+          }
+          .movie__comment {
+            margin-top: 40px;
+            display: flex;
+            justify-content: flex-end;
+            font-size: 18px;
+            p {
+              font-weight: 600;
+              text-indent: 2em;
+            }
+            .comment {
+              font-weight: 600;
+              width: 50%;
+              div {
+                margin-top: 27px;
+                display: flex;
+                justify-content: space-between;
+                span:nth-child(2) {
+                  color: $custom_purple;
+                }
+              }
+            }
+          }
+          .movie__more {
+            margin-top: 65px;
+            display: flex;
+            justify-content: space-between;
+            color: $custom_purple;
+            font-weight: bold;
+            font-size: 18px;
+            a {
+              text-decoration: none;
+              color: inherit;
+              padding-bottom: 15px;
+              border-bottom: 3px solid $custom_purple;
+            }
+          }
+        }
+      }
+    }
+  }
+}
