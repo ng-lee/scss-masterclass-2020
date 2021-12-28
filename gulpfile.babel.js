@@ -10,8 +10,8 @@ const routes = {
   css: {
     watch: "src/scss/*",
     src: "src/scss/styles.scss",
-    dest: "dist/css"
-  }
+    dest: "dist/css",
+  },
 };
 
 const styles = () =>
@@ -21,14 +21,14 @@ const styles = () =>
     .pipe(
       autoprefixer({
         flexbox: true,
-        grid: "autoplace"
+        grid: "autoplace",
       })
     )
     .pipe(minify())
     .pipe(gulp.dest(routes.css.dest));
 
 const watch = () => {
-  gulp.watch(routes.css.watch, styles);
+  gulp.watch(routes.css.watch, { usePolling: true }, styles);
 };
 
 const clean = () => del(["dist/styles.css"]);
