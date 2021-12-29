@@ -12,16 +12,27 @@ body {
   display: grid;
   grid-template-columns: 0.7fr 1fr 0.7fr;
   grid-template-rows: 0.5fr repeat(5, 1fr) 0.5fr;
-  column-gap: 0.1rem;
-  row-gap: 0.1rem;
+  column-gap: 0.05rem;
+  row-gap: 0.05rem;
   div {
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: $gold;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  .link {
+    &:hover {
+      background-color: $gold;
+      color: white;
+    }
   }
   .picture {
     grid-column: 2 / span 1;
     grid-row: 2 / span 5;
+    background-image: url("https://images.unsplash.com/photo-1640224803335-2013d71992cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDQ0fGVkUU9taWhlVXRZfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+    background-position: center;
   }
 }
