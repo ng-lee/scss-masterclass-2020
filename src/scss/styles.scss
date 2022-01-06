@@ -1,79 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=The+Nautigal&display=swap");
+
 * {
   box-sizing: border-box;
 }
 
 body {
   width: 100%;
-  height: 100vh;
+  padding: 2rem;
 }
 
 header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
   width: 100%;
-  height: 2.5rem;
-  padding: 0.5rem 1rem;
-  background-color: white;
+  font-size: 2.5rem;
+  line-height: 1.3;
+  margin-bottom: 10rem;
 }
 
-.navigation {
-  ul,
-  ul li {
+.table {
+  margin-bottom: 5rem;
+  article {
     display: flex;
-    align-items: flex-end;
+    border-bottom: 1px solid black;
+    margin-bottom: 1.4rem;
+    padding-bottom: 0.5rem;
+    &:last-child {
+      border-bottom: none;
+    }
   }
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-.color {
-  margin-right: 0.5rem;
-}
-
-.color-circle {
-  border-radius: 50%;
-  width: 1rem;
-  height: 1rem;
-  margin-right: 0.2rem;
-}
-
-.color-refer {
+.table__content {
   font-size: 1.4rem;
+  &:hover {
+    cursor: pointer;
+    font-family: "The Nautigal", cursive;
+    font-weight: bold;
+    font-size: 2rem;
+  }
 }
 
-main {
-  margin-top: 2.5rem;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+.content__year {
+  width: 10%;
 }
 
-article {
-  height: 35rem;
-  width: 100%;
+.content__client {
+  width: 35%;
+}
+
+.content__project {
+  width: 55%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: space-between;
-  padding: 1rem 1rem;
-  & > div {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
 }
 
-.article__main {
-  span:first-child {
-    height: 100%;
-    transform: rotate(-90deg);
+.text-panel {
+  p {
+    margin-bottom: 4rem;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    .small {
+      font-size: 1rem;
+    }
+    .underline {
+      text-decoration: underline;
+    }
   }
-  span:last-child {
-    transform: rotate(90deg);
+
+  .comment {
+    font-size: 0.8rem;
   }
 }
